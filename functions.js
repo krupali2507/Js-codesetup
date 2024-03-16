@@ -1,5 +1,5 @@
 // // What is function in js
-// // smply function is a block of code that gets executed and return something and it can be useful in making code modular and reusable.
+// // simply function is a block of code that gets executed and return something and it can be useful in making code modular and reusable.
 
 // // How to define function in js?
 // // There are multiple ways to define function in js and one of them is
