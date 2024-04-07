@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Krupali Rao</h1>
+    <button id="button">Stop from changing Name</button>
+    <button id="button1">Start Printing Name</button>
+    <button id="button2">Stop Printing Name</button>
+</body>
+<script>
+
+    // //setTimeOut
+    const changeMyname = () => {
+        console.log("Inside change my name function")
+        document.querySelector("h1").innerHTML = "Bhoomi Rao"
+    }
+    const chnageTimeout = setTimeout(changeMyname, 5000)
+    document.querySelector("#button").addEventListener("click", function () {
+        console.log("when need to stop from changing name")
+        clearTimeout(chnageTimeout)
+
+    })
+
+    //setInterval
+    let printIntervalReference;
+    const printName = (str) => {
+        console.log(str, Date.now())
+    }
+    document.querySelector("#button1").addEventListener("click", function () {
+        const whichName = document.querySelector('h1').innerHTML
+        printIntervalReference = setInterval(printName, 1000, whichName)
+
+
+    })
+    document.querySelector("#button2").addEventListener("click", function () {
+        clearInterval(printIntervalReference)
+    })
+
+</script>
+
+</html>
